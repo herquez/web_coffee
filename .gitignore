@@ -1,0 +1,25 @@
+*/migrations
+webPersonal/settings.py
+settings.py
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+__pycache__/
+
+# Local development settings
+*.env
+*.pyc
+*.pyo
+*.sqlite3
+*.pyc
+*.pyo
+
+# Static files directory
+/staticfiles/
+
+# Media files directory
+/media/
+
+# Django secret key
+*.secret_key
