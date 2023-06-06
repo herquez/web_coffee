@@ -45,3 +45,15 @@ python manage.py makemigrations
 ```bash
 python manage.py migrate
 ```
+
+### Media Files
+
+#### Settings
+
+Into settings.py lets configure the url and root to media files as the next way:
+
+```python
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+```

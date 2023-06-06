@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from core import views as views_core
+from django.conf import settings
 
 urlpatterns = [
     path('', views_core.home, name='home'),
@@ -12,3 +13,7 @@ urlpatterns = [
     path('sample/', views_core.sample, name='sample'),
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
