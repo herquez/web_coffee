@@ -1,16 +1,18 @@
 from django.contrib import admin
-from django.urls import path
-from core import views as views_core
+from django.urls import path, include
+from core import views
+from services import urls as services_urls
 from django.conf import settings
 
 urlpatterns = [
-    path('', views_core.home, name='home'),
-    path('about/', views_core.about, name='about'),
-    path('services/', views_core.services, name='services'),
-    path('store/', views_core.store, name='store'),
-    path('contact/', views_core.contact, name='contact'),
-    path('blog/', views_core.blog, name='blog'),
-    path('sample/', views_core.sample, name='sample'),
+    path('', views.home, name='home'),
+    path('store/', views.store, name='store'),
+    path('contact/', views.contact, name='contact'),
+    path('blog/', views.blog, name='blog'),
+    path('about/', views.about, name='about'),
+    path('sample/', views.sample, name='sample'),
+    path('services/', include(services_urls)),
+
     path('admin/', admin.site.urls),
 ]
 
