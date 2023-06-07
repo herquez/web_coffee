@@ -6,9 +6,6 @@ def home(request):
 def about(request):
     return render(request, 'core/contents/about.html')
 
-def services(request):
-    return render(request, 'core/contents/services.html')
-
 def store(request):
     return render(request, 'core/contents/store.html')
 
