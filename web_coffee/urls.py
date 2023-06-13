@@ -2,13 +2,14 @@ from django.contrib import admin
 from django.urls import path, include
 from core import views
 from services import urls as services_urls
+from blog import urls as blog_urls
 from django.conf import settings
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('store/', views.store, name='store'),
     path('contact/', views.contact, name='contact'),
-    path('blog/', views.blog, name='blog'),
+    path('blog/', include(blog_urls)),
     path('about/', views.about, name='about'),
     path('sample/', views.sample, name='sample'),
     path('services/', include(services_urls)),
