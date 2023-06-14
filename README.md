@@ -57,3 +57,7 @@ Into settings.py lets configure the url and root to media files as the next way:
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 ```
+
+## Data Base
+
+https://drive.google.com/drive/folders/1dTPA1dPWHd-eE4sRZl8HemfDb9pG327M?usp=sharing

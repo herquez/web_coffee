@@ -2,7 +2,7 @@
 {% block title %}Blog{% endblock title %}
 
 {% block content %}
-{% for post in posts_all %}
+{% for post in category.get_posts.all %}
 <section class="page-section cta">
     <div class="container">
         <div class="row">
