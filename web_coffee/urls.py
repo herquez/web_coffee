@@ -3,6 +3,7 @@ from django.urls import path, include
 from core import views
 from services import urls as services_urls
 from blog import urls as blog_urls
+from pages import urls as pages_urls
 from django.conf import settings
 
 urlpatterns = [
@@ -11,7 +12,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('blog/', include(blog_urls)),
     path('about/', views.about, name='about'),
-    path('sample/', views.sample, name='sample'),
+    path('page/', include(pages_urls)),
     path('services/', include(services_urls)),
 
     path('admin/', admin.site.urls),
