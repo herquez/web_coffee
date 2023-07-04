@@ -6,4 +6,4 @@ def page(request, page_id):
     context = {
         'page': page,
     }
-    return render(request, 'pages/sample.html', context)
+    return render(request, 'pages/page.html', context)
