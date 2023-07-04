@@ -10,7 +10,7 @@ class Page(models.Model):
     class Meta:
         verbose_name = 'Página'
         verbose_name_plural = 'Páginas'
-        ordering = ['Title']
+        ordering = ['title']
 
     def __str__(self):
         return self.title
