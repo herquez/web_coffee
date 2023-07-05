@@ -3,8 +3,8 @@ from .models import Page
 
 class PageAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated', 'deleted')
-    list_display = ('title', 'content', 'created', 'updated')
-    ordering = ('created',)
+    list_display = ('title', 'order')
+    ordering = ('order',)
     search_fields = ('title', 'content')
     date_hierarchy = ('created')
 
