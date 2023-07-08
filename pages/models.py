@@ -1,8 +1,9 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 class Page(models.Model):
     title = models.CharField(verbose_name='Titulo', max_length=200)
-    content = models.TextField(verbose_name='Contenido')
+    content = RichTextField(verbose_name='Contenido')
     created = models.DateTimeField(verbose_name='Fecha de creación', 
     auto_now_add=True)
     order = models.SmallIntegerField(verbose_name='Orden', default=0)
